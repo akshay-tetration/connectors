@@ -232,7 +232,7 @@ echo -e ""
 # List all the subscriptions
 echo "Fetching subscriptions..."
 az account list --output table --query "[].{Name:name, ID:id}"
-all_subs_ids=$(az account list --output table --query "[].id" --output tsv | paste -sd ',')
+all_subs_ids="c2f21153-dfdd-413b-afb2-411e7da24e37,14c85a0f-cbe8-4ee2-b72c-d88499b75369,2feee0b1-265e-4f07-bfb4-d826c1cf8438"
 
 # Input for required subscriptions.
 if [ "$interactive" == "true" ]; then
